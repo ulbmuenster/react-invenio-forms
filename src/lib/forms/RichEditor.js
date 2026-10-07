@@ -89,7 +89,9 @@ export class RichEditor extends Component {
    * only need to override the strings they actually want to translate.
    */
   getLabels = () => {
-    return { ...defaultLabels, ...this.props.labels };
+    const { labels } = this.props;
+
+    return { ...defaultLabels, ...labels };
   };
 
   addToFileErrors = (filename, error) => {
